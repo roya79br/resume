@@ -1,0 +1,117 @@
+:global(.page).root {
+  padding: 0;
+  overflow: hidden;
+}
+.band {
+  background: var(--accent);
+  color: var(--on-accent);
+  padding: 9mm 16mm 7mm;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+.band h1 {
+  font-size: 2.4rem;
+}
+.role {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-top: 2px;
+}
+.contact {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+.contact a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.body {
+  padding: 8mm 16mm 14mm;
+}
+.lead {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 70ch;
+}
+.cols {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 26px;
+}
+.job {
+  margin-bottom: 12px;
+}
+.job ul {
+  margin: 4px 0 0 16px;
+}
+.date {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--accent);
+  white-space: nowrap;
+}
+.card {
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+}
+.skill {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  margin-top: 4px;
+}
+.skill strong {
+  flex: 0 0 10.5rem;
+  font-size: 0.85rem;
+}
+/* .tags comes from the shared TagList component, so it stays a global class */
+.skill :global(.tags) {
+  flex: 1;
+  margin-top: 0;
+}
+.skill :global(.tags) li {
+  font-size: 0.9rem;
+  padding: 3px 12px;
+}
+@media (max-width: 680px) {
+  .cols {
+    grid-template-columns: 1fr;
+  }
+  .band,
+  .body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .skill {
+    flex-wrap: wrap;
+  }
+  .skill strong {
+    flex-basis: 100%;
+  }
+}
+@media print {
+  :global(.page).root {
+    font-size: 13.5px;
+  }
+  .job,
+  .card {
+    break-inside: avoid;
+  }
+  .band {
+    padding: 11mm 12mm 8mm;
+  }
+  .contact {
+    font-size: 0.82rem;
+  }
+  .body {
+    padding: 6mm 12mm;
+  }
+}

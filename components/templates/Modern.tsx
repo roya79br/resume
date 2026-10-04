@@ -1,20 +1,21 @@
 import Link from "next/link";
 import type { TemplateProps } from "./types";
 import { ContactItems, JobBody, ProjectBody } from "@/components/parts";
+import styles from "./Modern.module.css";
 
 // The main column comes first in the HTML (better reading order for screen readers and ATS).
 // CSS moves the sidebar to the left.
 export default function Modern({ r }: TemplateProps) {
   return (
-    <main className="page t-modern">
-      <div className="m-main">
+    <main className={`page ${styles.root}`}>
+      <div className={styles.main}>
         <h1>{r.name}</h1>
         <p className="role">{r.role}</p>
         <p className="summary">{r.summary}</p>
 
         <h2>Projects</h2>
         {r.projects.map((p) => (
-          <article key={p.slug} className="m-job">
+          <article key={p.slug} className={styles.job}>
             <div className="row">
               <h3>
                 <Link href={`/projects/${p.slug}`}>{p.name}</Link>
@@ -27,7 +28,7 @@ export default function Modern({ r }: TemplateProps) {
 
         <h2>Experience</h2>
         {r.experience.map((job) => (
-          <article key={`${job.company}-${job.period}`} className="m-job">
+          <article key={`${job.company}-${job.period}`} className={styles.job}>
             <div className="row">
               <h3>{job.title}</h3>
               <span className="muted">{job.period}</span>
@@ -37,7 +38,7 @@ export default function Modern({ r }: TemplateProps) {
         ))}
       </div>
 
-      <aside className="m-side">
+      <aside className={styles.side}>
         <h2>Contact</h2>
         <ul>
           <li>{r.location}</li>

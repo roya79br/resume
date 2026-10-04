@@ -1,0 +1,68 @@
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--ink);
+}
+.contact {
+  list-style: none;
+  text-align: right;
+  font-size: 0.9rem;
+}
+.contact a {
+  color: var(--muted);
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 30px;
+}
+.job {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.years {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+  padding-top: 2px;
+}
+.job ul {
+  margin: 4px 0 0 16px;
+}
+.job li {
+  margin-bottom: 2px;
+}
+.project {
+  margin-bottom: 10px;
+}
+.skill {
+  margin-bottom: 10px;
+}
+@media (max-width: 680px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .job {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  .contact {
+    text-align: left;
+  }
+}
+@media print {
+  :global(.page).root {
+    font-size: 14px;
+  }
+  .job,
+  .project,
+  .skill {
+    break-inside: avoid;
+  }
+}

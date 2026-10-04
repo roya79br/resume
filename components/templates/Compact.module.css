@@ -1,0 +1,37 @@
+:global(.page).root {
+  font-size: 13px;
+}
+.head {
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--ink);
+  margin-bottom: 4px;
+}
+.head h1 {
+  font-size: 2rem;
+}
+.root h2 {
+  font:
+    700 0.85rem var(--font-body),
+    sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--ink);
+}
+.item {
+  margin-bottom: 8px;
+}
+.item ul {
+  margin: 2px 0 0 18px;
+}
+.line {
+  margin-bottom: 3px;
+}
+@media print {
+  :global(.page).root {
+    font-size: 14.5px;
+  }
+  .item {
+    break-inside: avoid;
+  }
+}
