@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { resume } from "@/data/resume";
+import { TagList } from "@/components/parts";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -28,9 +29,9 @@ export default async function ProjectPage({ params }: Props) {
       <h1>{project.name}</h1>
       <p className="role">{project.tagline}</p>
       <p className="muted">{project.year}</p>
-      <p className="tags" style={{ margin: "14px 0" }}>
-        {project.stack.map((s) => <span key={s}>{s}</span>)}
-      </p>
+      <div style={{ margin: "14px 0" }}>
+        <TagList items={project.stack} />
+      </div>
       <p className="summary">{project.description}</p>
       <h2>Highlights</h2>
       <ul className="plain">
