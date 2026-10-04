@@ -101,15 +101,6 @@ a:focus-visible {
   border-radius: 6px;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
 }
-.head {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 16px;
-  flex-wrap: wrap;
-  padding-bottom: 14px;
-  border-bottom: 2px solid var(--ink);
-}
 h1 {
   font:
     600 2.5rem/1.05 var(--font-display),
@@ -123,14 +114,6 @@ h1 {
   margin-top: 4px;
 }
 .muted {
-  color: var(--muted);
-}
-.contact {
-  list-style: none;
-  text-align: right;
-  font-size: 0.9rem;
-}
-.contact a {
   color: var(--muted);
 }
 .summary {
@@ -150,39 +133,10 @@ h3 {
   font-size: 1rem;
   font-weight: 650;
 }
-.grid {
-  display: grid;
-  grid-template-columns: 1.7fr 1fr;
-  gap: 30px;
-}
-.job {
-  display: grid;
-  grid-template-columns: 92px 1fr;
-  gap: 12px;
-  margin-bottom: 12px;
-}
-.years {
-  color: var(--muted);
-  font-size: 0.85rem;
-  font-variant-numeric: tabular-nums;
-  padding-top: 2px;
-}
-.job ul {
-  margin: 4px 0 0 16px;
-}
-.job li {
-  margin-bottom: 2px;
-}
-.project {
-  margin-bottom: 10px;
-}
 .row {
   display: flex;
   justify-content: space-between;
   gap: 12px;
-}
-.skill {
-  margin-bottom: 10px;
 }
 .tags {
   list-style: none;
@@ -206,167 +160,6 @@ ul.plain {
 }
 .print-url {
   display: none;
-}
-.page.t-modern {
-  padding: 0;
-  display: grid;
-  grid-template-columns: 68mm 1fr;
-  overflow: hidden;
-  min-height: 297mm;
-}
-.m-side {
-  order: -1;
-  background: var(--side);
-  color: #e8f3f2;
-  padding: 14mm 8mm;
-  print-color-adjust: exact;
-  -webkit-print-color-adjust: exact;
-}
-.m-side h2 {
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.25);
-  margin-top: 16px;
-  font-size: 1rem;
-}
-.m-side h2:first-child {
-  margin-top: 0;
-}
-.m-side ul {
-  list-style: none;
-  font-size: 0.9rem;
-  overflow-wrap: anywhere;
-}
-.m-side a {
-  color: inherit;
-}
-.m-side h3 {
-  font-size: 0.9rem;
-  color: #fff;
-}
-.m-side p {
-  font-size: 0.88rem;
-  color: #c3dcd9;
-  margin-bottom: 8px;
-}
-.m-main {
-  padding: 14mm 12mm;
-}
-.m-job {
-  margin-bottom: 12px;
-}
-.m-job ul {
-  margin: 4px 0 0 16px;
-}
-.page.t-compact {
-  font-size: 13px;
-}
-.k-head {
-  text-align: center;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--ink);
-  margin-bottom: 4px;
-}
-.k-head h1 {
-  font-size: 2rem;
-}
-.t-compact h2 {
-  font:
-    700 0.85rem var(--font-body),
-    sans-serif;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  border-bottom: 1px solid var(--ink);
-}
-.k-item {
-  margin-bottom: 8px;
-}
-.k-item ul {
-  margin: 2px 0 0 18px;
-}
-.k-line {
-  margin-bottom: 3px;
-}
-.page.t-bold {
-  padding: 0;
-  overflow: hidden;
-}
-.b-band {
-  background: var(--accent);
-  color: var(--on-accent);
-  padding: 9mm 16mm 7mm;
-  print-color-adjust: exact;
-  -webkit-print-color-adjust: exact;
-}
-.b-band h1 {
-  font-size: 2.4rem;
-}
-.b-role {
-  font-size: 1.15rem;
-  font-weight: 600;
-  margin-top: 2px;
-}
-.b-contact {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 18px;
-  margin-top: 8px;
-  font-size: 0.9rem;
-}
-.b-contact a {
-  color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-.b-body {
-  padding: 8mm 16mm 14mm;
-}
-.b-lead {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  max-width: 70ch;
-}
-.b-cols {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 26px;
-}
-.b-job {
-  margin-bottom: 12px;
-}
-.b-job ul {
-  margin: 4px 0 0 16px;
-}
-.b-date {
-  font-weight: 600;
-  font-size: 0.85rem;
-  color: var(--accent);
-  white-space: nowrap;
-}
-.b-card {
-  border: 1px solid var(--line);
-  border-left: 4px solid var(--accent);
-  border-radius: 6px;
-  padding: 8px 12px;
-  margin-bottom: 8px;
-}
-.b-skill {
-  display: flex;
-  align-items: baseline;
-  gap: 5px;
-  margin-top: 4px;
-}
-.b-skill strong {
-  flex: 0 0 10.5rem;
-  font-size: 0.85rem;
-}
-.b-skill .tags {
-  flex: 1;
-  margin-top: 0;
-}
-.b-skill .tags li {
-  font-size: 0.9rem;
-  padding: 3px 12px;
 }
 @media (max-width: 1200px) {
   body {
@@ -400,35 +193,6 @@ ul.plain {
     border-radius: 0;
     box-shadow: none;
   }
-  .grid,
-  .b-cols {
-    grid-template-columns: 1fr;
-  }
-  .job {
-    grid-template-columns: 1fr;
-    gap: 2px;
-  }
-  .contact {
-    text-align: left;
-  }
-  .page.t-modern {
-    grid-template-columns: 1fr;
-    min-height: 0;
-  }
-  .m-side {
-    order: 0;
-  }
-  .b-band,
-  .b-body {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .b-skill {
-    flex-wrap: wrap;
-  }
-  .b-skill strong {
-    flex-basis: 100%;
-  }
 }
 @page {
   size: A4;
@@ -453,20 +217,6 @@ ul.plain {
     box-shadow: none;
     border-radius: 0;
   }
-  .page.t-modern {
-    height: 296mm;
-    min-height: 0;
-    font-size: 14.5px;
-  }
-  .page.t-classic {
-    font-size: 14px;
-  }
-  .page.t-bold {
-    font-size: 13.5px;
-  }
-  .page.t-compact {
-    font-size: 14.5px;
-  }
   h1 {
     font-size: 2rem;
   }
@@ -475,29 +225,5 @@ ul.plain {
   }
   a {
     color: inherit;
-  }
-  .job,
-  .project,
-  .skill,
-  .m-job,
-  .b-job,
-  .b-card,
-  .k-item {
-    break-inside: avoid;
-  }
-  .m-side {
-    padding: 12mm 8mm;
-  }
-  .m-main {
-    padding: 12mm 10mm;
-  }
-  .b-band {
-    padding: 11mm 12mm 8mm;
-  }
-  .b-contact {
-    font-size: 0.82rem;
-  }
-  .b-body {
-    padding: 6mm 12mm;
   }
 }

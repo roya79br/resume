@@ -1,37 +1,38 @@
 import Link from "next/link";
 import type { TemplateProps } from "./types";
 import { ContactItems, JobBody, ProjectBody, TagList } from "@/components/parts";
+import styles from "./Bold.module.css";
 
 export default function Bold({ r }: TemplateProps) {
   return (
-    <main className="page t-bold">
-      <header className="b-band">
+    <main className={`page ${styles.root}`}>
+      <header className={styles.band}>
         <h1>{r.name}</h1>
-        <p className="b-role">{r.role}</p>
-        <ul className="b-contact">
+        <p className={styles.role}>{r.role}</p>
+        <ul className={styles.contact}>
           <li>{r.location}</li>
           <ContactItems contact={r.contact} />
         </ul>
       </header>
 
-      <div className="b-body">
-        <p className="b-lead">{r.summary}</p>
+      <div className={styles.body}>
+        <p className={styles.lead}>{r.summary}</p>
 
         <section>
           <h2>Skills</h2>
           {r.skills.map((s) => (
-            <div key={s.group} className="b-skill">
+            <div key={s.group} className={styles.skill}>
               <strong>{s.group}:</strong>
               <TagList items={s.items} />
             </div>
           ))}
         </section>
 
-        <div className="b-cols">
+        <div className={styles.cols}>
           <section>
             <h2>Projects</h2>
             {r.projects.map((p) => (
-              <article key={p.slug} className="b-card">
+              <article key={p.slug} className={styles.card}>
                 <div className="row">
                   <h3>
                     <Link href={`/projects/${p.slug}`}>{p.name}</Link>
@@ -47,10 +48,10 @@ export default function Bold({ r }: TemplateProps) {
             <section>
               <h2>Experience</h2>
               {r.experience.map((job) => (
-                <article key={`${job.company}-${job.period}`} className="b-job">
+                <article key={`${job.company}-${job.period}`} className={styles.job}>
                   <div className="row">
                     <h3>{job.title}</h3>
-                    <span className="b-date">{job.period}</span>
+                    <span className={styles.date}>{job.period}</span>
                   </div>
                   <JobBody job={job} />
                 </article>
