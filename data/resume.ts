@@ -65,7 +65,7 @@ export const resume: Resume = {
       description:
         "A small installable app that reminds you when to water your plants. Everything is stored on the device, so it works without a connection.",
       highlights: ["Installable app with offline reminders", "100 Lighthouse accessibility score"],
-      link: "https://github.com/elenabrandt/plantly",
+      link: "https://github.com/roya79br/resume",
     },
     {
       slug: "contrast-lens",
@@ -75,7 +75,7 @@ export const resume: Resume = {
       stack: ["TypeScript", "Vite", "axe-core"],
       description: "Highlights text that is hard to read on any page and explains how to fix it, based on the WCAG contrast rules.",
       highlights: ["Flags low-contrast text with one click", "Covered by 24 unit tests"],
-      link: "https://github.com/elenabrandt/contrast-lens",
+      link: "https://github.com/roya79br/resume",
     },
     {
       slug: "pocket-budget",
