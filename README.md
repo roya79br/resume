@@ -6,6 +6,16 @@ A resume website built with Next.js. One set of data, four ready-made layouts, a
 
 > The person in the demo (Elena Brandt) and all her data are fictional. The project itself is the point: it shows how I structure, style, test and ship a small front-end app.
 
+## Screenshots
+
+| Classic | Modern |
+| --- | --- |
+| ![Classic template](docs/classic.png) | ![Modern template](docs/modern.png) |
+
+| Compact | Bold |
+| --- | --- |
+| ![Compact template](docs/compact.png) | ![Bold template](docs/bold.png) |
+
 ## Features
 
 - **Four templates** that share the same data. Compact is a single-column layout made to be easy for applicant tracking systems (ATS) to read.
